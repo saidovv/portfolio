@@ -1,0 +1,29 @@
+.marquee-infinite {
+    margin: 120px auto;
+    border: 1px solid transparent;
+    max-width: 80%;
+    overflow: hidden;
+}
+
+.marquee-infinite div {
+    display: flex;
+    width: 160%;
+    animation: marquee-infinite 6s linear infinite;
+}
+.marquee-infinite span {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.marquee-infinite:hover div {
+    animation-play-state: paused;
+}
+
+@keyframes marquee-infinite {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
